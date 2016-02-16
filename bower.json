@@ -1,0 +1,22 @@
+{
+  "name": "cooltech",
+  "description": "",
+  "main": "",
+  "authors": [
+    "platonovAlexey <kalyawe4ka@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "normalize.css#^3.0.3",
+    "jquery": "2.1.4"
+  }
+}
