@@ -1,0 +1,118 @@
+.footer{
+	background: url('/img/bg/footer_bg.png') center center;
+	position: relative;
+}
+
+.footer__top{
+	padding-top: 34px;
+}
+
+.footer__logo__block{
+	width: 45%;
+	float: left;
+	padding-top: 36px;
+		.logo_footer{
+			.logo__img{
+				max-width: 255px;
+			}
+		}
+}
+
+.footer__info{
+	width: 55%;
+	float: left;
+	text-align: right;
+		.footer_socials{
+			margin-bottom: 28px;
+			position: relative;
+			right: 8px;
+				.socials__item{
+					@include inlineblock();
+					margin-left: 12px;
+						.socials__link{
+							display: block;
+							width: 45px;
+							height: 45px;
+							border-radius: 50%;
+							background: #ffffff;
+							position: relative;
+								.socials__icon{
+									@include absolute-center;
+									background-image: url('../img/sprites/sprite.png');
+									height: 21px;
+									width: 25px;
+								}
+						}
+					&_fb{
+						.socials__icon{
+							@include sprite ($fb-dark)
+							background-position: -235px 0px;
+							&:hover{
+								@include sprite ($fb-dark-hover);
+								//background-position: -237px -61px;
+							}
+						}
+					}
+					&_vk{
+						.socials__icon{
+							@include sprite ($vk-dark);
+							background-position: 5px -121px;
+							&:hover{
+								@include sprite ($vk-dark-hover);
+								//background-position: -290px -164px;
+							}
+						}
+					}
+					&_tw{
+						.socials__icon{
+							@include sprite ($tw-dark);
+							//background-position: 4px -121px;
+							&:hover{
+								@include sprite ($tw-dark-hover);
+							}
+						}
+					}
+					&:first-child{
+					margin-left: 0;
+					}
+
+				}
+
+		}
+		.footer__nav{
+
+			.footer__nav-item{
+				@include inlineblock();
+				margin-left: 33px;
+				margin-bottom: 15px;
+					.footer__nav-link{
+						font-size: 14px;
+						line-height: 16px;
+						color: #ffffff;
+
+						&:hover{
+							text-decoration: none;
+						}
+					}
+			}
+		}
+}
+
+
+
+
+.footer__bottom{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	border-top: 1px solid #474747;
+	text-align: center;
+	color: #ffffff;
+	font-size: 12px;
+	line-height: 14px;
+}
+
+.footer__copyright{
+	padding: 8px 0;
+}

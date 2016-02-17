@@ -2,4 +2,35 @@
 
 @import "_misc/normalize";
 
-@import "_misc/header";
+/* --------- mixins --------- */
+
+@import "_misc/_mixins";
+
+/* --------- adjustment --------- */
+
+@import "_misc/_adjustment";
+
+/* --------- sections--------- */
+@import "_sections/_header";
+@import "_sections/_footer";
+
+@import "../img/sprites/sprite";
+
+/* --------- fonts --------- */
+
+@import "../fonts/stylesheet.css";
+@import "_misc/_fonts";
+
+
+
+
+
+/* --------- sections--------- */
+//@import "_plugins/**/*";
+
+/* --------- widgets--------- */
+//@import "_widgets/**/*";
+
+
+
+

@@ -1,0 +1,419 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$checkbox-name: 'checkbox';
+$checkbox-x: 225px;
+$checkbox-y: 182px;
+$checkbox-offset-x: -225px;
+$checkbox-offset-y: -182px;
+$checkbox-width: 13px;
+$checkbox-height: 10px;
+$checkbox-total-width: 305px;
+$checkbox-total-height: 298px;
+$checkbox-image: 'sprite.png';
+$checkbox: (225px, 182px, -225px, -182px, 13px, 10px, 305px, 298px, 'sprite.png', 'checkbox', );
+$checkbox-hover-name: 'checkbox_hover';
+$checkbox-hover-x: 172px;
+$checkbox-hover-y: 182px;
+$checkbox-hover-offset-x: -172px;
+$checkbox-hover-offset-y: -182px;
+$checkbox-hover-width: 13px;
+$checkbox-hover-height: 10px;
+$checkbox-hover-total-width: 305px;
+$checkbox-hover-total-height: 298px;
+$checkbox-hover-image: 'sprite.png';
+$checkbox-hover: (172px, 182px, -172px, -182px, 13px, 10px, 305px, 298px, 'sprite.png', 'checkbox_hover', );
+$pin-name: 'pin';
+$pin-x: 293px;
+$pin-y: 0px;
+$pin-offset-x: -293px;
+$pin-offset-y: 0px;
+$pin-width: 12px;
+$pin-height: 16px;
+$pin-total-width: 305px;
+$pin-total-height: 298px;
+$pin-image: 'sprite.png';
+$pin: (293px, 0px, -293px, 0px, 12px, 16px, 305px, 298px, 'sprite.png', 'pin', );
+$slider-control-name: 'slider-control';
+$slider-control-x: 293px;
+$slider-control-y: 216px;
+$slider-control-offset-x: -293px;
+$slider-control-offset-y: -216px;
+$slider-control-width: 8px;
+$slider-control-height: 14px;
+$slider-control-total-width: 305px;
+$slider-control-total-height: 298px;
+$slider-control-image: 'sprite.png';
+$slider-control: (293px, 216px, -293px, -216px, 8px, 14px, 305px, 298px, 'sprite.png', 'slider-control', );
+$tel-name: 'tel';
+$tel-x: 293px;
+$tel-y: 56px;
+$tel-offset-x: -293px;
+$tel-offset-y: -56px;
+$tel-width: 12px;
+$tel-height: 16px;
+$tel-total-width: 305px;
+$tel-total-height: 298px;
+$tel-image: 'sprite.png';
+$tel: (293px, 56px, -293px, -56px, 12px, 16px, 305px, 298px, 'sprite.png', 'tel', );
+$next-name: 'next';
+$next-x: 0px;
+$next-y: 289px;
+$next-offset-x: 0px;
+$next-offset-y: -289px;
+$next-width: 6px;
+$next-height: 9px;
+$next-total-width: 305px;
+$next-total-height: 298px;
+$next-image: 'sprite.png';
+$next: (0px, 289px, 0px, -289px, 6px, 9px, 305px, 298px, 'sprite.png', 'next', );
+$prev-name: 'prev';
+$prev-x: 218px;
+$prev-y: 237px;
+$prev-offset-x: -218px;
+$prev-offset-y: -237px;
+$prev-width: 6px;
+$prev-height: 9px;
+$prev-total-width: 305px;
+$prev-total-height: 298px;
+$prev-image: 'sprite.png';
+$prev: (218px, 237px, -218px, -237px, 6px, 9px, 305px, 298px, 'sprite.png', 'prev', );
+$bottom-sb-name: 'bottom-sb';
+$bottom-sb-x: 114px;
+$bottom-sb-y: 182px;
+$bottom-sb-offset-x: -114px;
+$bottom-sb-offset-y: -182px;
+$bottom-sb-width: 18px;
+$bottom-sb-height: 11px;
+$bottom-sb-total-width: 305px;
+$bottom-sb-total-height: 298px;
+$bottom-sb-image: 'sprite.png';
+$bottom-sb: (114px, 182px, -114px, -182px, 18px, 11px, 305px, 298px, 'sprite.png', 'bottom-sb', );
+$bottom-name: 'bottom';
+$bottom-x: 112px;
+$bottom-y: 237px;
+$bottom-offset-x: -112px;
+$bottom-offset-y: -237px;
+$bottom-width: 13px;
+$bottom-height: 9px;
+$bottom-total-width: 305px;
+$bottom-total-height: 298px;
+$bottom-image: 'sprite.png';
+$bottom: (112px, 237px, -112px, -237px, 13px, 9px, 305px, 298px, 'sprite.png', 'bottom', );
+$top-sb-name: 'top-sb';
+$top-sb-x: 56px;
+$top-sb-y: 182px;
+$top-sb-offset-x: -56px;
+$top-sb-offset-y: -182px;
+$top-sb-width: 18px;
+$top-sb-height: 11px;
+$top-sb-total-width: 305px;
+$top-sb-total-height: 298px;
+$top-sb-image: 'sprite.png';
+$top-sb: (56px, 182px, -56px, -182px, 18px, 11px, 305px, 298px, 'sprite.png', 'top-sb', );
+$top-name: 'top';
+$top-x: 165px;
+$top-y: 237px;
+$top-offset-x: -165px;
+$top-offset-y: -237px;
+$top-width: 13px;
+$top-height: 9px;
+$top-total-width: 305px;
+$top-total-height: 298px;
+$top-image: 'sprite.png';
+$top: (165px, 237px, -165px, -237px, 13px, 9px, 305px, 298px, 'sprite.png', 'top', );
+$fb-name: 'fb';
+$fb-x: 242px;
+$fb-y: 113px;
+$fb-offset-x: -242px;
+$fb-offset-y: -113px;
+$fb-width: 6px;
+$fb-height: 12px;
+$fb-total-width: 305px;
+$fb-total-height: 298px;
+$fb-image: 'sprite.png';
+$fb: (242px, 113px, -242px, -113px, 6px, 12px, 305px, 298px, 'sprite.png', 'fb', );
+$tw-name: 'tw';
+$tw-x: 0px;
+$tw-y: 237px;
+$tw-offset-x: 0px;
+$tw-offset-y: -237px;
+$tw-width: 16px;
+$tw-height: 12px;
+$tw-total-width: 305px;
+$tw-total-height: 298px;
+$tw-image: 'sprite.png';
+$tw: (0px, 237px, 0px, -237px, 16px, 12px, 305px, 298px, 'sprite.png', 'tw', );
+$vk-name: 'vk';
+$vk-x: 293px;
+$vk-y: 164px;
+$vk-offset-x: -293px;
+$vk-offset-y: -164px;
+$vk-width: 10px;
+$vk-height: 12px;
+$vk-total-width: 305px;
+$vk-total-height: 298px;
+$vk-image: 'sprite.png';
+$vk: (293px, 164px, -293px, -164px, 10px, 12px, 305px, 298px, 'sprite.png', 'vk', );
+$fb-name: 'fb';
+$fb-x: 186px;
+$fb-y: 112px;
+$fb-offset-x: -186px;
+$fb-offset-y: -112px;
+$fb-width: 11px;
+$fb-height: 21px;
+$fb-total-width: 305px;
+$fb-total-height: 298px;
+$fb-image: 'sprite.png';
+$fb: (186px, 112px, -186px, -112px, 11px, 21px, 305px, 298px, 'sprite.png', 'fb', );
+$tw-name: 'tw';
+$tw-x: 65px;
+$tw-y: 0px;
+$tw-offset-x: -65px;
+$tw-offset-y: 0px;
+$tw-width: 25px;
+$tw-height: 21px;
+$tw-total-width: 305px;
+$tw-total-height: 298px;
+$tw-image: 'sprite.png';
+$tw: (65px, 0px, -65px, 0px, 25px, 21px, 305px, 298px, 'sprite.png', 'tw', );
+$vk-name: 'vk';
+$vk-x: 130px;
+$vk-y: 0px;
+$vk-offset-x: -130px;
+$vk-offset-y: 0px;
+$vk-width: 16px;
+$vk-height: 21px;
+$vk-total-width: 305px;
+$vk-total-height: 298px;
+$vk-image: 'sprite.png';
+$vk: (130px, 0px, -130px, 0px, 16px, 21px, 305px, 298px, 'sprite.png', 'vk', );
+$fb-name: 'fb';
+$fb-x: 242px;
+$fb-y: 0px;
+$fb-offset-x: -242px;
+$fb-offset-y: 0px;
+$fb-width: 11px;
+$fb-height: 21px;
+$fb-total-width: 305px;
+$fb-total-height: 298px;
+$fb-image: 'sprite.png';
+$fb: (242px, 0px, -242px, 0px, 11px, 21px, 305px, 298px, 'sprite.png', 'fb', );
+$tw-name: 'tw';
+$tw-x: 0px;
+$tw-y: 0px;
+$tw-offset-x: 0px;
+$tw-offset-y: 0px;
+$tw-width: 25px;
+$tw-height: 21px;
+$tw-total-width: 305px;
+$tw-total-height: 298px;
+$tw-image: 'sprite.png';
+$tw: (0px, 0px, 0px, 0px, 25px, 21px, 305px, 298px, 'sprite.png', 'tw', );
+$vk-name: 'vk';
+$vk-x: 0px;
+$vk-y: 121px;
+$vk-offset-x: 0px;
+$vk-offset-y: -121px;
+$vk-width: 16px;
+$vk-height: 21px;
+$vk-total-width: 305px;
+$vk-total-height: 298px;
+$vk-image: 'sprite.png';
+$vk: (0px, 121px, 0px, -121px, 16px, 21px, 305px, 298px, 'sprite.png', 'vk', );
+$fb-name: 'fb';
+$fb-x: 242px;
+$fb-y: 61px;
+$fb-offset-x: -242px;
+$fb-offset-y: -61px;
+$fb-width: 6px;
+$fb-height: 12px;
+$fb-total-width: 305px;
+$fb-total-height: 298px;
+$fb-image: 'sprite.png';
+$fb: (242px, 61px, -242px, -61px, 6px, 12px, 305px, 298px, 'sprite.png', 'fb', );
+$tw-name: 'tw';
+$tw-x: 56px;
+$tw-y: 237px;
+$tw-offset-x: -56px;
+$tw-offset-y: -237px;
+$tw-width: 16px;
+$tw-height: 12px;
+$tw-total-width: 305px;
+$tw-total-height: 298px;
+$tw-image: 'sprite.png';
+$tw: (56px, 237px, -56px, -237px, 16px, 12px, 305px, 298px, 'sprite.png', 'tw', );
+$vk-name: 'vk';
+$vk-x: 293px;
+$vk-y: 112px;
+$vk-offset-x: -293px;
+$vk-offset-y: -112px;
+$vk-width: 10px;
+$vk-height: 12px;
+$vk-total-width: 305px;
+$vk-total-height: 298px;
+$vk-image: 'sprite.png';
+$vk: (293px, 112px, -293px, -112px, 10px, 12px, 305px, 298px, 'sprite.png', 'vk', );
+$empty-name: 'empty';
+$empty-x: 0px;
+$empty-y: 61px;
+$empty-offset-x: 0px;
+$empty-offset-y: -61px;
+$empty-width: 21px;
+$empty-height: 20px;
+$empty-total-width: 305px;
+$empty-total-height: 298px;
+$empty-image: 'sprite.png';
+$empty: (0px, 61px, 0px, -61px, 21px, 20px, 305px, 298px, 'sprite.png', 'empty', );
+$filled-name: 'filled';
+$filled-x: 0px;
+$filled-y: 182px;
+$filled-offset-x: 0px;
+$filled-offset-y: -182px;
+$filled-width: 16px;
+$filled-height: 15px;
+$filled-total-width: 305px;
+$filled-total-height: 298px;
+$filled-image: 'sprite.png';
+$filled: (0px, 182px, 0px, -182px, 16px, 15px, 305px, 298px, 'sprite.png', 'filled', );
+$grids-hover-name: 'grids-hover';
+$grids-hover-x: 186px;
+$grids-hover-y: 56px;
+$grids-hover-offset-x: -186px;
+$grids-hover-offset-y: -56px;
+$grids-hover-width: 16px;
+$grids-hover-height: 16px;
+$grids-hover-total-width: 305px;
+$grids-hover-total-height: 298px;
+$grids-hover-image: 'sprite.png';
+$grids-hover: (186px, 56px, -186px, -56px, 16px, 16px, 305px, 298px, 'sprite.png', 'grids-hover', );
+$grids-name: 'grids';
+$grids-x: 112px;
+$grids-y: 121px;
+$grids-offset-x: -112px;
+$grids-offset-y: -121px;
+$grids-width: 16px;
+$grids-height: 16px;
+$grids-total-width: 305px;
+$grids-total-height: 298px;
+$grids-image: 'sprite.png';
+$grids: (112px, 121px, -112px, -121px, 16px, 16px, 305px, 298px, 'sprite.png', 'grids', );
+$lines-hover-name: 'lines-hover';
+$lines-hover-x: 186px;
+$lines-hover-y: 0px;
+$lines-hover-offset-x: -186px;
+$lines-hover-offset-y: 0px;
+$lines-hover-width: 16px;
+$lines-hover-height: 16px;
+$lines-hover-total-width: 305px;
+$lines-hover-total-height: 298px;
+$lines-hover-image: 'sprite.png';
+$lines-hover: (186px, 0px, -186px, 0px, 16px, 16px, 305px, 298px, 'sprite.png', 'lines-hover', );
+$lines-name: 'lines';
+$lines-x: 61px;
+$lines-y: 61px;
+$lines-offset-x: -61px;
+$lines-offset-y: -61px;
+$lines-width: 16px;
+$lines-height: 16px;
+$lines-total-width: 305px;
+$lines-total-height: 298px;
+$lines-image: 'sprite.png';
+$lines: (61px, 61px, -61px, -61px, 16px, 16px, 305px, 298px, 'sprite.png', 'lines', );
+$rows-hover-name: 'rows-hover';
+$rows-hover-x: 56px;
+$rows-hover-y: 121px;
+$rows-hover-offset-x: -56px;
+$rows-hover-offset-y: -121px;
+$rows-hover-width: 16px;
+$rows-hover-height: 16px;
+$rows-hover-total-width: 305px;
+$rows-hover-total-height: 298px;
+$rows-hover-image: 'sprite.png';
+$rows-hover: (56px, 121px, -56px, -121px, 16px, 16px, 305px, 298px, 'sprite.png', 'rows-hover', );
+$rows-name: 'rows';
+$rows-x: 130px;
+$rows-y: 61px;
+$rows-offset-x: -130px;
+$rows-offset-y: -61px;
+$rows-width: 16px;
+$rows-height: 16px;
+$rows-total-width: 305px;
+$rows-total-height: 298px;
+$rows-image: 'sprite.png';
+$rows: (130px, 61px, -130px, -61px, 16px, 16px, 305px, 298px, 'sprite.png', 'rows', );
+$spritesheet-width: 305px;
+$spritesheet-height: 298px;
+$spritesheet-image: 'sprite.png';
+$spritesheet-sprites: ($checkbox, $checkbox-hover, $pin, $slider-control, $tel, $next, $prev, $bottom-sb, $bottom, $top-sb, $top, $fb, $tw, $vk, $fb, $tw, $vk, $fb, $tw, $vk, $fb, $tw, $vk, $empty, $filled, $grids-hover, $grids, $lines-hover, $lines, $rows-hover, $rows, );
+$spritesheet: (305px, 298px, 'sprite.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Here are example usages in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+`display: inline-block` sprite:
+<img class="icon-home" />
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
