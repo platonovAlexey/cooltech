@@ -1,0 +1,73 @@
+.sidebar
+	.categories
+		ul.categories__list
+			- var items = ["Флагманы", "Бюджетная линейка"]
+			each item in items
+				li(class="categories__item" + ((item == "Флагманы") ? ' ' + 'active' : ''))
+					a(href="#").categories__link= item
+	.filter
+		ul.filter__list
+			li.filter__item
+				.filter__title
+					a(href="#").filter__title_link Наличие в магазине
+				.filter__content
+					ul.filter__choose
+						- var items = ["Во всех магазинах", "В ближайшем ко мне магазине"]
+						each item in items
+							li.filter__choose_item
+								label.filter__choose_label
+									input(name="lovation" type="radio").filter__choose_input
+									.filter__choose_elem
+									.filter__choose_text= item
+			li.filter__item
+				.filter__title
+					a(href="#").filter__title_link Бренды
+				.filter__content
+					ul.filter__choose.filter__choose_checkboxes
+						- var items = ["Lenovo", "Apple", "Samsung", "Asus", "Motorola"]
+						each item in items
+							li.filter__choose_item
+								label.filter__choose_label
+									input(name="" type="checkbox").filter__choose_input
+									.filter__choose_elem
+									.filter__choose_text= item
+					.filter_reset-wrap
+						a(href="#").filter__reset Сбросить фильтр
+			li.filter__item
+				.filter__title
+					a(href="#").filter__title_link Цена
+				.filter__content
+					.filter__slider
+						.filter__slider_displays
+							.filter__slider_left
+								.filter__slider_text от
+								input(name="" type="text" placeholder="").filter__slider_input.filter__slider_input_from
+							.filter__slider_right
+								.filter__slider_text до
+								input(name="" type="text" placeholder="").filter__slider_input.filter__slider_input_to
+						div(class="filter__slider_element" data-min="0" data-max="35000")
+			li.filter__item.filter__choose_color
+				.filter__title
+					a(href="#").filter__title_link Цвет
+				.filter__content
+					ul.filter__colors
+						- var colors = ['#ffffff', '#cdcdcd', '#000000', '#002d53', '#ff1100', '#fff324', '#ff9243', '#78c479', '#00a7ff', '#a670b0', '#f879b0', '#913d14']
+						each color in colors
+							li.filter__colors_item
+								a(href="#" style="background-color:" + color).filter__colors_link
+			li.filter__item
+				.filter__title
+					a(href="#").filter__title_link Операционная система
+				.filter__content
+					.filter__content
+					ul.filter__choose.filter__choose_checkboxes
+						- var items = ['Android', 'iOs', 'Symbian', 'Windows Mobile', 'Custom']
+						each item in items
+							li.filter__choose_item
+								label.filter__choose_label
+									input(name="" type="checkbox").filter__choose_input
+									.filter__choose_elem
+									.filter__choose_text= item
+					.filter_reset-wrap
+						a(href="#").filter__reset Сбросить фильтр
+
