@@ -17,6 +17,7 @@
 @import "_sections/_breadcrumbs";
 @import "_sections/_content";
 @import "_sections/_sidebar";
+@import "_sections/_sort";
 
 @import "../img/sprites/sprite";
 
@@ -31,6 +32,7 @@
 
 /* --------- sections--------- */
 @import "_plugins/jquery-ui";
+@import "_plugins/select2";
 
 /* --------- widgets--------- */
 //@import "_widgets/**/*";

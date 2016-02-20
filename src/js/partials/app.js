@@ -1,45 +1,45 @@
 console.log('in app.js');
-var sliderWidget = (function(){
+var sliderCategories = (function(){
 
-    var _insertValues = function($this, min, max){
-        var container = $this.closest(".filter__slider"),
-            from = container.find(".filter__slider_input_from"),
-            to = container.find(".filter__slider_input_to");
+	var _insertValues = function($this, min, max){
+		var container = $this.closest(".filter__slider"),
+			from = container.find(".filter__slider_input_from"),
+			to = container.find(".filter__slider_input_to");
 
-        from.val(min);
-        to.val(max);
-    };
+		from.val(min);
+		to.val(max);
+	};
 
-    return {
-        init: function(){
+	return {
+		init: function(){
 
-            $(".filter__slider_element").each(function(){
+			$(".filter__slider_element").each(function(){
 
-                var $this = $(this),
-                    min = parseInt($this.data("min")),
-                    max = parseInt($this.data("max"));
+				var $this = $(this),
+					min = parseInt($this.data("min")),
+					max = parseInt($this.data("max"));
 
-                $this.slider({
-                    range: true,
-                    min: min,
-                    max: max,
-                    values: [min, max],
-                    slide: function(evt, ui) {
-                        var values = ui.values;
-                        _insertValues($this, values[0], values[1]);
-                    },
-                    create: function() {
-                        var values = $this.slider("option", "values");
-                        _insertValues($this, values[0], values[1]);
-                    }
-                });
-            });
-        }
-    }
+				$this.slider({
+					range: true,
+					min: min,
+					max: max,
+					values: [min, max],
+					slide: function(evt, ui) {
+						var values = ui.values;
+						_insertValues($this, values[0], values[1]);
+					},
+					create: function() {
+						var values = $this.slider("option", "values");
+						_insertValues($this, values[0], values[1]);
+					}
+				});
+			});
+		}
+	}
 }());
 
 
-var ctegoriesSort = (function(){
+var categoriesSort = (function(){
 
 	var _changeActiveClass = function($this){
 		$this.closest(".categories__item, .nav__item").addClass("active")
@@ -87,9 +87,9 @@ var accordeon = (function(){
 
 	$(document).ready(function (){
 
-		ctegoriesSort.init();
+		categoriesSort.init();
 		accordeon.init();
-		sliderWidget.init();
+		sliderCategories.init();
 
 		$(".filter__reset").on("click", function(e){
 		e.preventDefault();
@@ -102,8 +102,14 @@ var accordeon = (function(){
 		});
 
 		if ($(".filter__slider_element").length){
-        	sliderWidget.init();
-    	}
+			sliderCategories.init();
+		}
+
+		if ($(".sort__select_element").length){
+        $(".sort__select_element").select2({
+            minimumResultsForSearch: Infinity
+        });
+    }
 
 
 	});
