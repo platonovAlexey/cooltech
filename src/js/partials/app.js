@@ -1,4 +1,6 @@
 console.log('in app.js');
+
+
 var sliderCategories = (function(){
 
 	var _insertValues = function($this, min, max){
@@ -195,6 +197,10 @@ var accordeon = (function(){
 
 	$(document).ready(function (){
 
+		if ($(".filter").length){
+				accordeon.init();
+		}
+
 		if ($(".products__slideshow").length){
 				slideShow.init();
 		}
@@ -203,13 +209,14 @@ var accordeon = (function(){
 				ratingWidget.init();
 		}
 
-		if ($(".filter__slider-element").length){
-				sliderWidget.init();
+		if ($(".filter__slider_element").length){
+				sliderCategories.init();
 		}
 
+
+
 		categoriesSort.init();
-		accordeon.init();
-		sliderCategories.init();
+		// accordeon.init();
 		viewStateCange.init();
 
 		$(".filter__reset").on("click", function(e){
