@@ -1,18 +1,18 @@
 .main__title{
-    font-size: 20px;
-    line-height: 22px;
-    color: #303030;
-    font-family: 'OpenSans-Bold';
-    margin-bottom: 32px;
+		font-size: 20px;
+		line-height: 22px;
+		color: #303030;
+		font-family: 'OpenSans-Bold';
+		margin-bottom: 32px;
 }
 
 
 .main__content{
-    @include clearfix;
-    margin-bottom: 30px;
+		@include clearfix;
+		margin-bottom: 30px;
 }
 
 .content{
-    float: right;
-    width: 747px;
+		float: right;
+		width: 747px;
 }

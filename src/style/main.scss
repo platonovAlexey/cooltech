@@ -18,6 +18,12 @@
 @import "_sections/_content";
 @import "_sections/_sidebar";
 @import "_sections/_sort";
+@import "_sections/_products";
+@import "_sections/_pagination";
+@import "_sections/_attension";
+@import "_views/_grid_view";
+@import "_views/_line_view";
+
 
 @import "../img/sprites/sprite";
 
@@ -30,7 +36,7 @@
 
 
 
-/* --------- sections--------- */
+/* --------- plugins--------- */
 @import "_plugins/jquery-ui";
 @import "_plugins/select2";
 

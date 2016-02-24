@@ -56,7 +56,8 @@
 					&_vk{
 						.socials__icon{
 							@include sprite ($vk-dark);
-							background-position: 5px -121px;
+							background-position: 4px -121px;
+
 							&:hover{
 								@include sprite ($vk-dark-hover);
 								//background-position: -290px -164px;
@@ -97,9 +98,6 @@
 			}
 		}
 }
-
-
-
 
 .footer__bottom{
 	position: absolute;

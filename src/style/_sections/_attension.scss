@@ -1,0 +1,20 @@
+.attension__text{
+	p{
+		font-size: 14px;
+		line-height: 20px;
+		color: #303030;
+		margin-bottom: 20px;
+		text-align: justify;
+		text-indent: 36px;
+	}
+
+	.column{
+		width: 48% !important;
+		&.first{
+			float: left !important;
+		}
+		&.last{
+			float: right !important;
+		}
+	}
+}
