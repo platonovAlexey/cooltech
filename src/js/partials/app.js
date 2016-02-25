@@ -1,5 +1,21 @@
 console.log('in app.js');
 
+// var sliderCategories = $(function() {
+//   $( ".filter__slider_element" ).slider({
+//       range: true,
+//       min: 0,
+//       max: 35000,
+//       values: [ 0, 35000 ],
+//       slide: function( event, ui ) {
+//         $( ".filter__slider_input_from" ).val(ui.values[ 0 ]);
+//         $( ".filter__slider_input_to" ).val(ui.values[ 1 ]);
+//       }
+//     });
+//     $( ".filter__slider_input_from" ).val(  $( ".filter__slider_element" ).slider( "values", 0 ));
+//     $( ".filter__slider_input_to" ).val(  $( ".filter__slider_element" ).slider( "values", 1 ));
+
+//   });
+
 
 var sliderCategories = (function(){
 
@@ -23,16 +39,18 @@ var sliderCategories = (function(){
 
 				$this.slider({
 					range: true,
+					step: 1,
 					min: min,
 					max: max,
 					values: [min, max],
-					slide: function(evt, ui) {
+					slide: function(e, ui) {
 						var values = ui.values;
 						_insertValues($this, values[0], values[1]);
 					},
 					create: function() {
 						var values = $this.slider("option", "values");
 						_insertValues($this, values[0], values[1]);
+
 					}
 				});
 			});
@@ -195,6 +213,9 @@ var accordeon = (function(){
 }());
 
 
+
+
+
 	$(document).ready(function (){
 
 		if ($(".filter").length){
@@ -209,15 +230,16 @@ var accordeon = (function(){
 				ratingWidget.init();
 		}
 
-		if ($(".filter__slider_element").length){
-				sliderCategories.init();
-		}
+		// if ($(".filter__slider_element").length){
+		// 		sliderCategories.init();
+		// }
 
 
 
 		categoriesSort.init();
 		// accordeon.init();
 		viewStateCange.init();
+		sliderCategories.init();
 
 		$(".filter__reset").on("click", function(e){
 		e.preventDefault();
