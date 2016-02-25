@@ -190,17 +190,28 @@ var accordeon = (function(){
 			content = container.find(".filter__content"),
 			otherContant = $this.closest(".filter").find(".filter__content");
 
-		if (!container.hasClass("active")){
-			otherContant.slideUp().closest(".filter__item").removeClass("active");
-
-
-			container.addClass("active");
-			content.stop(true, true).slideDown();
-		}else{
-			container.removeClass("active");
-			content.stop(true, true).slideUp();
+			/*open items*/
+			if (!container.hasClass("active")){
+				container.addClass("active");
+				content.stop(true, true).slideUp();
+			}else{
+				container.removeClass("active");
+				content.stop(true, true).slideDown();
+			}
 		}
-	}
+
+		/*close items*/
+	// 	if (!container.hasClass("active")){
+	// 		otherContant.slideUp().closest(".filter__item").removeClass("active");
+
+
+	// 		container.addClass("active");
+	// 		content.stop(true, true).slideDown();
+	// 	}else{
+	// 		container.removeClass("active");
+	// 		content.stop(true, true).slideUp();
+	// 	}
+	// }
 
 	return {
 		init: function(){
@@ -213,10 +224,18 @@ var accordeon = (function(){
 }());
 
 
-
-
-
 	$(document).ready(function (){
+
+
+		/*choose color*/
+		$(".filter__colors_link").click(function (e) {
+			e.preventDefault();
+			$(this).parent().toggleClass("active");
+		});
+
+		/*add active block colors*/
+		$('.sort__view_rows').addClass('active');
+
 
 		if ($(".filter").length){
 				accordeon.init();
@@ -230,16 +249,16 @@ var accordeon = (function(){
 				ratingWidget.init();
 		}
 
-		// if ($(".filter__slider_element").length){
-		// 		sliderCategories.init();
-		// }
+		if ($(".filter__slider_element").length){
+				sliderCategories.init();
+		}
 
 
 
 		categoriesSort.init();
 		// accordeon.init();
 		viewStateCange.init();
-		sliderCategories.init();
+		// sliderCategories.init();
 
 		$(".filter__reset").on("click", function(e){
 		e.preventDefault();
@@ -258,7 +277,7 @@ var accordeon = (function(){
 				});
 		}
 
-		/* --------- columnizer --------- */
+		/* columnizer */
 		$('.important-info__text').addClass('dontsplit');
 		$(".attension__text").columnize({
 				columns: 2

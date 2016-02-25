@@ -46,7 +46,7 @@
 	@extend .categories__list;
 }
 .filter__content{
-	display: none;
+	//display: none;
 	margin-top: 19px;
 }
 .filter__item{
@@ -60,7 +60,7 @@
 		.filter__title{
 			&:after{
 				content: "";
-				@include sprite($top-sb);
+				@include sprite($bottom-sb);
 			}
 		}
 	}
@@ -73,7 +73,7 @@
 	}
 	&:after{
 		content: "";
-		@include sprite ($bottom-sb);
+		@include sprite ($top-sb);
 		position: absolute;
 		top: 7px;
 		right: -16px;
@@ -242,6 +242,18 @@
 	&:hover{
 		border-color: #fd8331;
 	}
+
+	&:active{
+		border-color: #fd8331;
+	}
+
+	&:checked{
+		border-color: #fd8331;
+	}
+}
+
+.filter__colors_item.active{
+	border: 3px solid #fd8331;
 }
 
 .filter__colors{

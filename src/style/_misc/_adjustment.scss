@@ -4,10 +4,19 @@ $container-width: 1105px;
 $footer-height: 222px;
 $body-font: 'Open Sans', sans-serif;
 
-input{
-	&:focus{
-		outline: none;
-	}
+// input{
+// 	&:focus{
+// 		outline: none;
+// 	}
+// }
+
+.clearfix::before,
+.clearfix::after {
+	content: "";
+	display: table;
+}
+.clearfix::after {
+	clear: both;
 }
 
 html{
@@ -78,8 +87,4 @@ footer{
 		min-width: $container-width + 30;
 		height: $footer-height;
 		margin-top: -222px;
-}
-
-.maincontent{
-		margin-bottom: 15px;
 }
